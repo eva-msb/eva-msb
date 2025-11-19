@@ -490,3 +490,38 @@ body {
 .cv-link:hover {
   opacity: 0.7;
 }
+
+/* --- MOBILE OPTIMIZATION FOR HEADER --- */
+@media (max-width: 768px) {
+
+  /* Header-Layout: übereinander statt nebeneinander */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; 
+  }
+
+  /* Name kleiner + weniger Zeilenhöhe */
+  .name {
+    font-size: 32px;      /* vorher 52px */
+    line-height: 1.1;
+  }
+
+  /* Tagline etwas kleiner + weichere Zeilenhöhe */
+  .tagline {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Extra small screens (iPhone SE, ältere Geräte) */
+@media (max-width: 480px) {
+
+  .name {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 13px;
+  }
+}
