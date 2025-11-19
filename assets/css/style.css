@@ -498,13 +498,19 @@ body {
   .header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px; 
+    gap: 16px;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;   /* ⬅️ WICHTIG: volle Breite auf Mobile */
   }
 
   /* Name kleiner + weniger Zeilenhöhe */
   .name {
     font-size: 32px;      /* vorher 52px */
     line-height: 1.1;
+    margin-bottom: 4px;   /* ⬅️ etwas Luft zur Tagline */
   }
 
   /* Tagline etwas kleiner + weichere Zeilenhöhe */
@@ -514,9 +520,7 @@ body {
   }
 }
 
-/* Extra small screens (iPhone SE, ältere Geräte) */
 @media (max-width: 480px) {
-
   .name {
     font-size: 28px;
   }
